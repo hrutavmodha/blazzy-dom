@@ -1,5 +1,5 @@
 {
-    "name": "blazzy-dom-cli",
+    "name": "myApp",
     "version": "1.0.0",
     "type": "commonjs",
     "description": "A CLI-based project scaffolder for Blazzy DOM library",
@@ -10,7 +10,7 @@
         "blazzy-dom scaffolder"
     ],
     "bin": {
-        "create-blazzy-app": "index.js"
+        "create-blazzy-app": "node index.js"
     },
     "author": "Hrutav Modha",
     "license": "MIT",
