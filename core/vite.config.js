@@ -8,18 +8,9 @@ export default defineConfig({
             entry: resolve(__dirname, 'src', 'index.ts'),
             name: 'BlazzyDOM',
             formats: [
-                'es',
-                'cjs'
+                'es'
             ],
-            fileName: (format) => {
-                `blazzy-dom.${format}.js`
-            }
-        },
-        rollupOptions: {
-            external: [],
-            output: {
-                globals: {}
-            }
+            fileName: (format) => `blazzy-dom.${format}.js`
         },
         emptyOutDir: true
     },
@@ -29,7 +20,7 @@ export default defineConfig({
     },
     resolve: {
         alias: {
-            jsx: resolve(__dirname, 'src', 'jsx'),
+            'jsx': resolve(__dirname, 'src', 'jsx'),
         },
     },
 })

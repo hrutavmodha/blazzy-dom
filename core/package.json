@@ -1,6 +1,6 @@
 {
     "name": "blazzy-dom",
-    "version": "1.0.0",
+    "version": "1.0.15",
     "type": "module",
     "lint-staged": {
         "src/**/*.{js, ts, tsx}": [
@@ -8,6 +8,26 @@
             "prettier --write"
         ]
     },
+    "main": "dist/blazzy-dom.es.js",
+    "exports": {
+        ".": {
+            "import": "./dist/blazzy-dom.es.js"
+        }
+    },
+    "files": [
+        "package.json",
+        "./src/dist",
+        "./README.md",
+        "./LICENSE"
+    ],
+    "keywords": [
+        "frontend",
+        "jsx",
+        "dom",
+        "typescript",
+        "ui"
+    ],
+    "license": "MIT",
     "scripts": {
         "start": "vite",
         "build": "tsc && vite build",

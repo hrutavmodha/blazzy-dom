@@ -2,12 +2,6 @@
 
 A tiny, batteries-included JSX-to-DOM micro-framework. No virtual DOM, no component classes — just plain functions that return real DOM nodes, a minimal hooks system, a simple client-side router, and a small set of useful UI primitives.
 
-This repository is organized as a multi-part project:
-
-- `core/`: framework runtime, components, hooks, router, and dev setup (Vite + TS)
-- `cli/`: CLI tooling (planned)
-- `documentation/`: docs site (planned)
-
 ### Why Blazzy DOM?
 
 - **Real DOM first**: Components return `HTMLElement`s directly
@@ -19,7 +13,17 @@ This repository is organized as a multi-part project:
 
 ---
 
-## Quick start
+## Quick Start
+
+Requirements: Node 18+
+
+``` Bash
+npm install blazzy-dom
+```
+
+After installing, you're all good to write your UI in JavaScript through JSX and rendering it in an empty HTML file with root division.
+
+## Contributing Guidelines
 
 Requirements: Node 18+
 
@@ -57,8 +61,6 @@ blazzy-dom/
     index.html          # Mounts #root
     vite.config.js      # Vite + esbuild JSX config
     tsconfig.json       # TS with custom jsxImportSource
-  cli/                  # (coming soon)
-  documentation/        # (coming soon)
 ```
 
 ---
