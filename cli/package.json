@@ -1,5 +1,5 @@
 {
-    "name": "myApp",
+    "name": "templates",
     "version": "1.0.0",
     "type": "commonjs",
     "description": "A CLI-based project scaffolder for Blazzy DOM library",

@@ -3,3 +3,4 @@ dist/
 *.tgz
 core/README.md
 core/LICENSE
+core/jsx

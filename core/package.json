@@ -15,9 +15,14 @@
             "import": "./dist/blazzy-dom.es.js"
         }
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hrutavmodha/blazzy-dom.git"
+    },
     "files": [
         "package.json",
-        "./src/dist",
+        "./dist",
+        "./jsx",
         "./README.md",
         "./LICENSE"
     ],
