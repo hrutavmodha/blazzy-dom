@@ -1,6 +1,6 @@
 {
     "name": "blazzy-dom",
-    "version": "1.0.16",
+    "version": "1.0.17",
     "type": "module",
     "description": "A tiny, batteries-included JSX-to-DOM micro-framework. No virtual DOM, no component classes — just plain functions that return real DOM nodes, a minimal hooks system, a simple client-side router, and a small set of useful UI primitives.",
     "lint-staged": {
@@ -9,10 +9,13 @@
             "prettier --write"
         ]
     },
-    "main": "dist/blazzy-dom.es.js",
+    "main": "./dist/blazzy-dom.es.js",
     "exports": {
         ".": {
             "import": "./dist/blazzy-dom.es.js"
+        },
+        "./jsx/jsx-runtime": {
+            "import": "./jsx/jsx-runtime.ts"
         }
     },
     "repository": {
@@ -34,6 +37,9 @@
         "ui"
     ],
     "author": "Hrutav Modha",
+    "maintainers": [
+        "Hrutav Modha"
+    ],
     "license": "MIT",
     "scripts": {
         "start": "vite",

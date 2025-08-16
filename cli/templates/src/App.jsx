@@ -1,9 +1,6 @@
-import {
-    Division,
-    Heading,
-    Paragraph
-    // @ts-ignore
-} from 'blazzy-dom'
+console.log('Control went to App.jsx')
+import { Division, Heading, Paragraph } from 'blazzy-dom'
+console.log(Division, Heading, Paragraph)
 export default function App() {
     return (
         <Division>

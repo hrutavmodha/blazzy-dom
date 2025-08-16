@@ -1,13 +1,9 @@
 import { defineConfig } from 'vite'
-import { resolve } from 'path'
+import { jsx } from 'blazzy-dom'
 export default defineConfig({
     esbuild: {
-        jsxImportSource: 'jsx',
+        jsxFactory: jsx,
+        jsxImportSource: 'blazzy-dom',
         jsxDev: false,
-    },
-    resolve: {
-        alias: {
-            'jsx': resolve(__dirname, 'src', 'jsx'),
-        },
-    },
+    }
 })

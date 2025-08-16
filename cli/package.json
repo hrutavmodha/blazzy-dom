@@ -10,7 +10,7 @@
         "blazzy-dom scaffolder"
     ],
     "bin": {
-        "create-blazzy-app": "node index.js"
+        "create-blazzy-app": "./index.js"
     },
     "author": "Hrutav Modha",
     "license": "MIT",
