@@ -3,13 +3,17 @@
         "target": "ES2022",
         "useDefineForClassFields": true,
         "module": "ESNext",
-        "lib": ["ES2022", "DOM", "DOM.Iterable"],
+        "lib": [
+            "ES2022",
+            "DOM",
+            "DOM.Iterable"
+        ],
         "skipLibCheck": true,
         "allowJs": true,
         "moduleResolution": "bundler",
         "baseUrl": ".",
         "jsx": "react-jsx",
-        "jsxImportSource": "src/jsx",
+        "jsxImportSource": "blazzy-dom/jsx",
         "allowImportingTsExtensions": true,
         "verbatimModuleSyntax": true,
         "moduleDetection": "force",
@@ -20,6 +24,5 @@
         "erasableSyntaxOnly": true,
         "noFallthroughCasesInSwitch": true,
         "noUncheckedSideEffectImports": true
-    },
-    "include": ["src"]
+    }
 }

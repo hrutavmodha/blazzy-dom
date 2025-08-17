@@ -1,0 +1,22 @@
+{
+    "name": "templates",
+    "version": "1.0.0",
+    "description": "",
+    "private": true,
+    "main": "src/index.js",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "blazzy-dom": "1.0.25"
+    },
+    "devDependencies": {
+        "vite": "~7.1.2"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}

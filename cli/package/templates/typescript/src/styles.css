@@ -1,0 +1,15 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+.templateDiv {
+    margin: 10px;
+    padding: 10px;
+    width: 90vw;
+    height: 90vh;
+    background: linear-gradient(to right, #f0f0f0, #555);
+}
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2em;
+}

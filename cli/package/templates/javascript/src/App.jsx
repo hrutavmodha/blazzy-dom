@@ -1,10 +1,8 @@
-console.log('Control went to App.jsx')
 import { Division, Heading, Paragraph } from 'blazzy-dom'
-console.log(Division, Heading, Paragraph)
 export default function App() {
     return (
-        <Division>
-            <Heading>Welcome to Blazzy DOM</Heading>
+        <Division id='templateDiv'>
+            <Heading level={1}>Welcome to Blazzy DOM</Heading>
             <Paragraph>Edit src/App.tsx to view changes</Paragraph>
         </Division>
     )

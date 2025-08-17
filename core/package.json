@@ -1,6 +1,6 @@
 {
     "name": "blazzy-dom",
-    "version": "1.0.22",
+    "version": "1.0.25",
     "type": "module",
     "description": "A tiny, batteries-included JSX-to-DOM micro-framework. No virtual DOM, no component classes — just plain functions that return real DOM nodes, a minimal hooks system, a simple client-side router, and a small set of useful UI primitives.",
     "lint-staged": {
@@ -13,13 +13,16 @@
     "types": "./index.d.ts",
     "exports": {
         ".": {
-            "import": "./dist/blazzy-dom.es.js"
+            "import": "./dist/blazzy-dom.es.js",
+            "types": "./index.d.ts"
         },
         "./jsx/jsx-runtime": {
-            "import": "./jsx/jsx-runtime.ts"
+            "import": "./jsx/jsx-runtime.ts",
+            "types": "./jsx/jsx.d.ts"
         },
         "./jsx/jsx-dev-runtime": {
-            "import": "./jsx/jsx-dev-runtime.ts"
+            "import": "./jsx/jsx-dev-runtime.ts",
+            "types": "./jsx/jsx.d.ts"
         }
     },
     "repository": {
@@ -27,12 +30,8 @@
         "url": "https://github.com/hrutavmodha/blazzy-dom.git"
     },
     "files": [
-        "package.json",
-        "./dist",
-        "./jsx",
-        "./README.md",
-        "./LICENSE",
-        "./index.d.ts"
+        "./package.json",
+        "./package"
     ],
     "keywords": [
         "frontend",

@@ -1,6 +1,2 @@
 node_modules/
-dist/
 *.tgz
-core/README.md
-core/LICENSE
-core/jsx

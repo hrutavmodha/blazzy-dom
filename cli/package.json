@@ -1,20 +1,31 @@
 {
-    "name": "templates",
-    "version": "1.0.0",
-    "type": "commonjs",
+    "name": "blazzy-cli",
+    "version": "1.0.1",
+    "type": "module",
     "description": "A CLI-based project scaffolder for Blazzy DOM library",
+    "main": "./index.js",
     "keywords": [
         "blazzy-dom",
         "create-blazzy-app",
         "cli",
         "blazzy-dom scaffolder"
     ],
+    "files": [
+        "./index.js",
+        "./templates",
+        "./package.json"
+    ],
     "bin": {
         "create-blazzy-app": "./index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hrutavmodha/blazzy-dom.git"
     },
     "author": "Hrutav Modha",
     "license": "MIT",
     "dependencies": {
+        "blazzy-dom": "^1.0.24",
         "chalk": "^5.5.0",
         "commander": "^14.0.0",
         "execa": "^9.6.0",
