@@ -15,7 +15,6 @@
     "author": "Hrutav Modha",
     "license": "MIT",
     "dependencies": {
-        "blazzy-dom": "^1.0.16",
         "chalk": "^5.5.0",
         "commander": "^14.0.0",
         "execa": "^9.6.0",

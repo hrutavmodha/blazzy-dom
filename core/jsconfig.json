@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "blazzy-dom/jsx",
+    "baseUrl": ".",
+    "paths": {
+      "blazzy-dom": ["./src/index.ts"],
+      "blazzy-dom/*": ["./src/*"]
+    }
+  },
+  "include": ["src/**/*", "**/*.js", "**/*.jsx"],
+  "exclude": ["node_modules", "dist"]
+}

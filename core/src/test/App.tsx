@@ -29,7 +29,7 @@ export default function App() {
                 Below is basic state example. Click the button below to change
                 the 0's value
             </Paragraph>
-            <Button onclick={() => setCount(count + 1)}>Change value</Button>
+            <Button onclick={() => setCount(count + 1)} >Change value</Button>
             <Paragraph>{count}</Paragraph>
             <Button onclick={() => setName('')}>Clear</Button>
             <Paragraph>{name}</Paragraph>

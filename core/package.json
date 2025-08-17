@@ -1,6 +1,6 @@
 {
     "name": "blazzy-dom",
-    "version": "1.0.17",
+    "version": "1.0.22",
     "type": "module",
     "description": "A tiny, batteries-included JSX-to-DOM micro-framework. No virtual DOM, no component classes — just plain functions that return real DOM nodes, a minimal hooks system, a simple client-side router, and a small set of useful UI primitives.",
     "lint-staged": {
@@ -10,12 +10,16 @@
         ]
     },
     "main": "./dist/blazzy-dom.es.js",
+    "types": "./index.d.ts",
     "exports": {
         ".": {
             "import": "./dist/blazzy-dom.es.js"
         },
         "./jsx/jsx-runtime": {
             "import": "./jsx/jsx-runtime.ts"
+        },
+        "./jsx/jsx-dev-runtime": {
+            "import": "./jsx/jsx-dev-runtime.ts"
         }
     },
     "repository": {
@@ -27,7 +31,8 @@
         "./dist",
         "./jsx",
         "./README.md",
-        "./LICENSE"
+        "./LICENSE",
+        "./index.d.ts"
     ],
     "keywords": [
         "frontend",
@@ -44,11 +49,15 @@
     "scripts": {
         "start": "vite",
         "build": "tsc && vite build",
+        "build:types": "tsc --project tsconfig.build.json",
         "lint": "eslint ./src --ext .js,.ts,.tsx",
+        "lint:fix": "eslint ./src --ext .js,.ts,.tsx --fix",
         "format": "prettier --write .",
         "type-check": "tsc --noEmit",
         "prepare": "husky",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "dev": "vite",
+        "clean": "rm -rf dist"
     },
     "devDependencies": {
         "@eslint/js": "^9.33.0",
