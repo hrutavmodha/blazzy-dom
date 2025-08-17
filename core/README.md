@@ -1,4 +1,4 @@
-# blazzy-dom
+# Blazzy DOM
 
 A tiny, batteries-included JSX-to-DOM micro-framework. No virtual DOM, no component classes — just plain functions that return real DOM nodes, a minimal hooks system, a simple client-side router, and a small set of useful UI primitives.
 

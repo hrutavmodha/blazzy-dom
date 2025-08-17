@@ -1,6 +1,6 @@
 {
     "name": "blazzy-cli",
-    "version": "1.0.1",
+    "version": "1.0.16",
     "type": "module",
     "description": "A CLI-based project scaffolder for Blazzy DOM library",
     "main": "./index.js",
@@ -11,8 +11,10 @@
         "blazzy-dom scaffolder"
     ],
     "files": [
+        "./README.md",
+        "./LICENSE",
         "./index.js",
-        "./templates",
+        "./templates/",
         "./package.json"
     ],
     "bin": {

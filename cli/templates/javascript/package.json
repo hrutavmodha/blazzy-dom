@@ -3,15 +3,15 @@
     "version": "1.0.0",
     "description": "",
     "private": true,
-    "main": "src/index.ts",
+    "main": "src/index.js",
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "tsc && vite build",
+        "build": "vite build",
         "preview": "vite preview"
     },
     "dependencies": {
-        "blazzy-dom": "1.0.25"
+        "blazzy-dom": "1.0.32"
     },
     "devDependencies": {
         "vite": "~7.1.2"

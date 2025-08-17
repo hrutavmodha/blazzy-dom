@@ -1,6 +1,6 @@
 {
     "name": "blazzy-dom",
-    "version": "1.0.25",
+    "version": "1.0.32",
     "type": "module",
     "description": "A tiny, batteries-included JSX-to-DOM micro-framework. No virtual DOM, no component classes — just plain functions that return real DOM nodes, a minimal hooks system, a simple client-side router, and a small set of useful UI primitives.",
     "lint-staged": {
@@ -9,20 +9,20 @@
             "prettier --write"
         ]
     },
-    "main": "./dist/blazzy-dom.es.js",
-    "types": "./index.d.ts",
+    "main": "./package/dist/blazzy-dom.es.js",
+    "types": "./package/index.d.ts",
     "exports": {
         ".": {
-            "import": "./dist/blazzy-dom.es.js",
-            "types": "./index.d.ts"
+            "import": "./package/dist/blazzy-dom.es.js",
+            "types": "./package/index.d.ts"
         },
         "./jsx/jsx-runtime": {
-            "import": "./jsx/jsx-runtime.ts",
-            "types": "./jsx/jsx.d.ts"
+            "import": "./package/jsx/jsx-runtime.ts",
+            "types": "./package/jsx/jsx.d.ts"
         },
         "./jsx/jsx-dev-runtime": {
-            "import": "./jsx/jsx-dev-runtime.ts",
-            "types": "./jsx/jsx.d.ts"
+            "import": "./package/jsx/jsx-dev-runtime.ts",
+            "types": "./package/jsx/jsx.d.ts"
         }
     },
     "repository": {
@@ -54,9 +54,7 @@
         "format": "prettier --write .",
         "type-check": "tsc --noEmit",
         "prepare": "husky",
-        "preview": "vite preview",
-        "dev": "vite",
-        "clean": "rm -rf dist"
+        "preview": "vite preview"
     },
     "devDependencies": {
         "@eslint/js": "^9.33.0",
