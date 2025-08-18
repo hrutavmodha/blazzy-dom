@@ -1,4 +1,5 @@
 import { Division, Heading, Paragraph } from 'blazzy-dom'
+import './styles.css'
 export default function App() {
     return (
         <Division id='templateDiv'>

@@ -11,10 +11,11 @@
         "preview": "vite preview"
     },
     "dependencies": {
-        "blazzy-dom": "1.0.32"
+        "blazzy-dom": "^1.0.0"
     },
     "devDependencies": {
-        "vite": "~7.1.2"
+        "vite": "~7.1.2",
+        "typescript": "^5.0.0"
     },
     "keywords": [],
     "author": "",

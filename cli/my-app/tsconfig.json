@@ -9,6 +9,7 @@
             "DOM.Iterable"
         ],
         "skipLibCheck": true,
+        "allowJs": true,
         "moduleResolution": "bundler",
         "baseUrl": ".",
         "jsx": "react-jsx",
