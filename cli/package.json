@@ -1,6 +1,6 @@
 {
     "name": "blazzy-cli",
-    "version": "1.0.20",
+    "version": "1.0.22",
     "type": "module",
     "description": "A CLI-based project scaffolder for Blazzy DOM library",
     "main": "./index.js",
@@ -30,7 +30,6 @@
         "blazzy-dom": "^1.0.24",
         "chalk": "^5.5.0",
         "commander": "^14.0.0",
-        "execa": "^9.6.0",
         "fs-extra": "^11.3.1",
         "inquirer": "^12.9.2"
     }
