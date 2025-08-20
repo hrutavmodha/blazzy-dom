@@ -8,7 +8,7 @@ const config: Config = {
         v4: true
     },
     url: 'https://hrutavmodha.github.io/',
-    baseUrl: '/documentation/frontend/',
+    baseUrl: '/',
     projectName: '/documentation/frontend/',
     organizationName: 'hrutavmodha',
     onBrokenLinks: 'throw',
