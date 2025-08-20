@@ -2,22 +2,18 @@ import Heading from '../components/Heading'
 import Division from '../components/Division'
 import Paragraph from '../components/Paragraph'
 import About from './About'
-import Input from '../components/Input'
-import useState from '../hooks/useState'
+import { createState, updateState } from '../state/state'
+import { Button } from '../components'
 export default function Home() {
-    const [input, setInput] = useState('')
+    const index = createState('count', 0)
     return (
         <Division id="myDiv">
             <Heading level={1}>Hello World</Heading>
             <Paragraph>This is a paragraph</Paragraph>
             <About />
-            <Input
-                type="text"
-                placeholder="Enter some text"
-                onchange={(e: any) => setInput(e.target.value)}
-            />
+            <Button onclick={() => updateState('count', index + 1)}>Click Me</Button>
             <Paragraph>You entered:</Paragraph>
-            <Paragraph>{input}</Paragraph>
+            <Paragraph>{index}</Paragraph>
         </Division>
     )
 }

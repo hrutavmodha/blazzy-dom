@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
 export default defineConfig({
-    root: 'src',
+    root: '.',
     build: {
         outDir: resolve(__dirname, 'dist'),
         lib: {

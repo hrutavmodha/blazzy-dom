@@ -1,4 +1,3 @@
-import { setContext } from '../hooks/useState'
 import render from '../render/render'
 let routes: { [key: string]: () => HTMLElement } = {}
 export function setRoutes(newRoutes: typeof routes): void {
@@ -8,11 +7,10 @@ export function navigate(path: string): void {
     window.history.pushState({}, '', path)
     renderRoute()
 }
-function renderRoute(): void {
+export function renderRoute(): void {
     const currentPath = window.location.pathname
     const currentComponent = routes[currentPath] || routes['/']
     if (currentComponent) {
-        setContext(currentPath)
         const root = document.getElementById('root') as HTMLDivElement
         render(currentComponent(), root)
     }

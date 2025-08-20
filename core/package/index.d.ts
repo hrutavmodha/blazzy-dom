@@ -165,4 +165,12 @@ declare module 'blazzy-dom' {
     export function navigate(
         path: string
     ): void;
+    export function createState(
+        key: string,
+        value: any
+    ): any;
+    export function updateState(
+        key: string,
+        value: any
+    ): void
 }
