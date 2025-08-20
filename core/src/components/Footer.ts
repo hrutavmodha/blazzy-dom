@@ -3,8 +3,8 @@ export default function Footer({
     ...props
 }: {
     children: Array<HTMLElement>
-    [key: string]: any    
-}) {
+    [key: string]: any
+}): HTMLElement {
     const footer = document.createElement('footer')
     if (!Array.isArray(children)) {
         children = [children]

@@ -1,120 +1,168 @@
 declare module 'blazzy-dom' {
-    export interface JSXElement {
-        type: string | Function;
-        props: Record<string, any>;
-        children?: JSXElement[];
-    }
-    export interface JSXProps {
-        children?: any;
-        [key: string]: any;
-    }
-    export function jsx(type: any, props: any): HTMLElement;
-    export function jsxs(type: any, props: any): HTMLElement;
-    export function jsxDEV(type: any, props: any): HTMLElement;
-    export function Fragment(props: JSXProps): any;
-    export function render(element: HTMLElement, parent?: HTMLElement): void;
-    export function dynamicRender(element: HTMLElement, parent?: HTMLElement): void;
-    export function setRender(renderFn: () => void): void;
-    export function reRender(): void;
-    export function setRoutes(routes: Record<string, () => HTMLElement>): void;
-    export function navigate(path: string): void;
-    export type StateSetter<T> = (value: T) => void;
-    export type StateTuple<T> = [T, StateSetter<T>];
-    export function useState<T>(initialState: T): StateTuple<T>;
-    export function useEffect(effect: () => void | (() => void), deps?: any[]): void;
-    export function useScript(src: string): void;
-    export function useSocket(url: string): {
-        socket: any;
-        connected: boolean;
-        send: (event: string, data?: any) => void;
-        on: (event: string, callback: (data: any) => void) => void;
-        off: (event: string, callback: (data: any) => void) => void;
-    };
-    export interface ComponentProps {
-        children?: any;
-        [key: string]: any;
-    }
-    export function Alert(props: ComponentProps & {
-        children: string;
-    }): HTMLElement;
-    export function Button(props: ComponentProps & {
-        children: string | number;
-        onClick?: (event: Event) => void;
-        disabled?: boolean;
-        type?: 'button' | 'submit' | 'reset';
-    }): HTMLButtonElement;
-    export function Code(props: ComponentProps & {
-        children: string;
-        language?: string;
-        theme?: 'light' | 'dark';
-    }): HTMLElement;
-    export function Confirm(props: ComponentProps & {
-        message: string;
-        onConfirm: () => void;
-        onCancel?: () => void;
-        confirmText?: string;
-        cancelText?: string;
-    }): HTMLElement;
-    export function Division(props: ComponentProps & {
-        className?: string;
-        id?: string;
+    export * from 'blazzy-dom/jsx/jsx-runtime';
+    export * from 'blazzy-dom/jsx/jsx-dev-runtime';
+    export function Alert({
+        children
+    }: {
+        children: string
     }): HTMLDivElement;
-    export function Footer(props: ComponentProps & {
-        className?: string;
-    }): HTMLElement;
-    export function Form(props: ComponentProps & {
-        onSubmit?: (event: Event) => void;
-        method?: string;
-        action?: string;
+    export function Button({
+        children,
+        ...props
+    }: {
+        children: string | number
+        [key: string]: any
+    }): HTMLButtonElement;
+    export function Code({
+        children,
+        ...props
+    }: {
+        children: Array<string>
+        [key: string]: any
+    }): HTMLDivElement;
+    export function Confirm({
+        children
+    }: {
+        children: string
+    }): Promise<boolean>;
+    export function Division({
+        children,
+        ...props
+    }: {
+        children: Array<HTMLElement>
+        [key: string]: any
+    }): HTMLDivElement;
+    export function Footer({
+        children,
+        ...props
+    }: {
+        children: Array<HTMLElement>
+        [key: string]: any
+    }): HTMLElement
+    export function Form({
+        children,
+        ...props
+    }: {
+        [key: string]: any;
+        children: HTMLElement[];
     }): HTMLFormElement;
-    export function Header(props: ComponentProps & {
-        level?: 1 | 2 | 3 | 4 | 5 | 6;
-        className?: string;
+    export function Header({
+        children,
+        ...props
+    }: {
+        [key: string]: any;
+        children: HTMLElement[];
     }): HTMLElement;
-    export function Heading(props: ComponentProps & {
-        level?: 1 | 2 | 3 | 4 | 5 | 6;
+    export function Heading({
+        level,
+        children,
+        ...props
+    }: {
+        [key: string]: any;
+        level: number;
         children: string | number;
     }): HTMLHeadingElement;
-    export function Input(props: ComponentProps & {
-        type?: string;
-        placeholder?: string;
-        value?: string;
-        onChange?: (event: Event) => void;
-        required?: boolean;
+    export function Input({
+        type,
+        ...props
+    }: {
+        [key: string]: any;
+        type: "number" | "button" | "text" | "file" | "date" | "email" | "password";
     }): HTMLInputElement;
-    export function Item(props: ComponentProps & {
-        children: any;
+    export function Item({
+        children,
+        ...props
+    }: {
+        [key: string]: any;
+        children: string;
     }): HTMLLIElement;
-    export function Link(props: ComponentProps & {
+    export function Link({
+        href,
+        children,
+        ...props
+    }: {
+        [key: string]: any;
         href: string;
         children: string | number;
-        target?: string;
     }): HTMLAnchorElement;
-    export function List(props: ComponentProps & {
-        ordered?: boolean;
-        children: any[];
-    }): HTMLUListElement | HTMLOListElement;
-    export function Paragraph(props: ComponentProps & {
-        children: string | number;
-        className?: string;
+    export function List({
+        ordered,
+        children,
+        ...props
+    }: {
+        [key: string]: any;
+        ordered: boolean;
+        children: HTMLLIElement[];
+    }): HTMLOListElement | HTMLUListElement;
+    export function Paragraph({
+        children,
+        ...props
+    }: {
+        [key: string]: any;
+        children: string | number | boolean;
     }): HTMLParagraphElement;
-    export function Prompt(props: ComponentProps & {
-        message: string;
-        onConfirm: (value: string) => void;
-        onCancel?: () => void;
-        placeholder?: string;
-        defaultValue?: string;
-    }): HTMLElement;
-    export function Script(props: ComponentProps & {
-        src?: string;
-        content?: string;
+    export function Prompt({
+        children
+    }: {
+        children: string;
+    }): Promise<string>;
+    export function Script({
+        children
+    }: {
+        children: () => any;
     }): HTMLScriptElement;
-}
-declare module 'blazzy-dom/jsx/jsx-runtime' {
-    export function jsx(type: any, props: any): HTMLElement;
-    export function jsxs(type: any, props: any): HTMLElement;
-    export function Fragment(props: any): any;
-}
-declare module 'blazzy-dom/jsx/jsx-dev-runtime' {
-    export function jsxDEV(type: any, props: any): HTMLElement;
+    export function useEffect(
+        callBack: () => void | (() => void),
+        dependencies: any[]
+    ): void
+    export function useScript({
+        path,
+        ...props
+    }: {
+        [key: string]: any;
+        path: string;
+    }): void
+    export function useSocket(options: {
+        url: string;
+        autoConnect?: boolean | undefined;
+        reconnection?: boolean | undefined;
+        reconnectionAttempts?: number | undefined;
+        reconnectionDelay?: number | undefined;
+    }): {
+        connect: () => void;
+        disconnect: () => void;
+        on: (event: string, handler: (...args: any[]) => void) => void;
+        off: (event: string) => void;
+        emit: (event: string, ...args: any[]) => void;
+        isConnected: () => boolean | undefined;
+    }
+    export function useState<T>(
+        initialState: T
+    ): [
+            T,
+            (val: T) => void
+        ];
+    export function setContext(
+        componentId: string
+    ): void;
+    export function dynamicRender(
+        routes: {
+            [key: string]: () => HTMLElement;
+        }
+    ): void;
+    export function render(
+        element: HTMLElement,
+        parent?: HTMLElement | undefined
+    ): void;
+    export function setRender(
+        render: () => void
+    ): void;
+    export function setRoutes(
+        newRoutes: {
+            [key: string]: () => HTMLElement;
+        }
+    ): void;
+    export function navigate(
+        path: string
+    ): void;
 }

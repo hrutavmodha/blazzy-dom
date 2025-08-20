@@ -1,6 +1,6 @@
 {
     "name": "blazzy-cli",
-    "version": "1.0.22",
+    "version": "1.0.23",
     "type": "module",
     "description": "A CLI-based project scaffolder for Blazzy DOM library",
     "main": "./index.js",
@@ -27,7 +27,7 @@
     "author": "Hrutav Modha",
     "license": "MIT",
     "dependencies": {
-        "blazzy-dom": "^1.0.24",
+        "blazzy-dom": "^1.0.36",
         "chalk": "^5.5.0",
         "commander": "^14.0.0",
         "fs-extra": "^11.3.1",

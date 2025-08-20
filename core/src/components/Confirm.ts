@@ -3,7 +3,7 @@ export default function Confirm({
     children
 }: {
     children: string
-    }) {
+}):  HTMLDivElement | Promise<boolean> {
     let resolver: (value: boolean) => void
     const response: Promise<boolean> = new Promise((resolve) => {
         resolver = resolve

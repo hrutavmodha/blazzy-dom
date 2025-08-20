@@ -6,7 +6,7 @@ export default function Code({
 }: {
     children: Array<string>
     [key: string]: any    
-}) {
+}): HTMLDivElement {
     const copyCode = async () => {
         try {
             await navigator.clipboard.writeText(block.innerText)
