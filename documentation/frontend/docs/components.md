@@ -72,7 +72,7 @@ List({ ordered = true, children, ...props }): HTMLUListElement | HTMLOListElemen
 Item({ children, ...props }): HTMLLIElement
 ```
 
-- `ordered`: `true` => `<ol>`, `false` => `<ul>`
+- `ordered`: `true` --> `<ol>`, `false` --> `<ul>`
 
 ## Header and Footer
 

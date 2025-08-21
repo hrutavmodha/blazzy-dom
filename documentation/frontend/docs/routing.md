@@ -12,18 +12,18 @@ Blazzy DOM ships with a tiny client-side router.
 import { setRoutes, navigate } from 'blazzy-dom'
 import { render } from 'blazzy-dom'
 
-function Home() { /* ... */ return document.createElement('div') }
-function About() { /* ... */ return document.createElement('div') }
+function Home() { /* your JSX content here */ }
+function About() { /* your JSX content here */}
 
 setRoutes({
-  '/': Home,
-  '/about': About
+    '/': Home,
+    '/about': About
 })
 
 // initial render
 render(Home(), document.getElementById('root') as HTMLElement)
 
-// navigate programmatically
+// to navigate programmatically, use
 navigate('/about')
 ```
 
@@ -40,8 +40,8 @@ Behavior:
 import { dynamicRender } from 'blazzy-dom'
 
 dynamicRender({
-  '/': Home,
-  '/about': About
+    '/': Home,
+    '/about': About
 })
 ```
 

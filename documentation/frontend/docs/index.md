@@ -29,19 +29,21 @@ npm install blazzy-dom
 import { render, Division, Heading, Button, useState } from 'blazzy-dom'
 
 function App() {
-  const [count, setCount] = useState(0)
-  return (
-    <Division>
-      <Heading level={1}>Count: {count}</Heading>
-      <Button onClick={() => setCount(count + 1)}>Increment</Button>
-    </Division>
+    const [count, setCount] = useState(0)
+    return (
+        <Division>
+            <Heading level={1}>Count: {count}</Heading>
+            <Button onClick={() => setCount(count + 1)}>Increment</Button>
+        </Division>
   )
 }
 
 render(App(), document.getElementById('root'))
 ```
 
-> **Note:** The state management is going to change a bit from end-user's side in version 1.1.x of `blazzy-dom`
+> **Note:** The state management has been changed successfully from the end-user's point.
+
+- Now, users can use `createState()` and `updateState()` for managing their state instead of using single `useState()`
 
 ## What’s in this documentation
 
@@ -54,5 +56,5 @@ render(App(), document.getElementById('root'))
 Links:
 
 - [GitHub](https://github.com/hrutavmodha/blazzy-dom)
-- [NPM (core)](https://www.npmjs.com/package/blazzy-dom)
-- [NPM (CLI)](https://www.npmjs.com/package/blazzy-cli)
+- [NPM (core package)](https://www.npmjs.com/package/blazzy-dom)
+- [NPM (CLI tool)](https://www.npmjs.com/package/blazzy-cli)

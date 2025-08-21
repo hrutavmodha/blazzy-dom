@@ -9,7 +9,7 @@ Blazzy DOM re-exports its public surface from `blazzy-dom`.
 ## Top-level exports
 
 - Rendering: `render`, `setRender`, `reRender`, `dynamicRender`
-- Hooks: `useState`, `useEffect`, `useScript`, `useSocket`
+- Useful functions: `createState`, `updateState`, `useEffect`, `useScript`, `useSocket`
 - Router: `setRoutes`, `navigate`
 - Components: `Alert`, `Button`, `Code`, `Confirm`, `Division`, `Footer`, `Form`, `Header`, `Heading`, `Input`, `Item`, `Link`, `List`, `Paragraph`, `Prompt`, `Script`
 - JSX runtime: `blazzy-dom/jsx` exposes `jsx`, `jsxs`, `Fragment`, `jsxDEV`

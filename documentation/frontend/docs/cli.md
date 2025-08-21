@@ -4,7 +4,7 @@ title: CLI
 sidebar_position: 8
 ---
 
-The Blazzy CLI scaffolds new projects quickly with pre-configured templates.
+The Blazzy CLI scaffolds new project of Blazzy DOM quickly with pre-configured templates.
 
 ## Install
 

@@ -39,8 +39,8 @@ Used internally by routing helpers. You can manually wire reactive updates by ca
 import { dynamicRender } from 'blazzy-dom'
 
 dynamicRender({
-  '/': Home,
-  '/about': About
+    '/': Home,
+    '/about': About
 })
 ```
 

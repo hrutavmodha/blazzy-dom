@@ -16,10 +16,10 @@ A template-wise breakdown is given below. Refer to your template's configuration
 
 ```json
 {
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "jsxImportSource": "blazzy-dom/jsx"
-  }
+    "compilerOptions": {
+        "jsx": "react-jsx",
+        "jsxImportSource": "blazzy-dom/jsx"
+  	}
 }
 ```
 
@@ -29,8 +29,8 @@ And,
 
 ```js
 esbuild: {
-  jsxImportSource: 'blazzy-dom/jsx',
-  jsxDev: false,
+  	jsxImportSource: 'blazzy-dom/jsx',
+  	jsxDev: false,
 }
 ```
 
@@ -52,9 +52,9 @@ If you chose JavaScript template, make sure that `vite.config.js` has:
 
 ```js
 esbuild: {
-  jsx: 'automatic',
-  jsxImportSource: 'blazzy-dom/jsx',
-  jsxDev: false,
+  	jsx: 'automatic',
+  	jsxImportSource: 'blazzy-dom/jsx',
+  	jsxDev: false,
 }
 ```
 

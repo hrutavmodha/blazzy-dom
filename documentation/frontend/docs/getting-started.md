@@ -73,5 +73,5 @@ render(App(), document.getElementById('root') as HTMLElement)
 Run with command:
 
 ```bash
-npm run dev
+npm start
 ```
