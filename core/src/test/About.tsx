@@ -3,18 +3,8 @@ import Division from '../components/Division'
 import Paragraph from '../components/Paragraph'
 import List from '../components/List'
 import Item from '../components/Item'
-import Confirm from '../components/Confirm'
 import Code from '../components/Code'
 export default function About() {
-    const confirm = <Confirm>Are you sure?</Confirm>
-    confirm.then((data: any) => {
-        if (data === true) {
-            console.log('Promise fulfilled')
-        }
-        else {
-            console.log('Promise rejected')
-        }
-    })
     return (
         <Division>
             <Heading level={1}>About's Page</Heading>
@@ -31,7 +21,6 @@ export default function About() {
             </List>
             <Code>
                 console.log('Hello World')
-                {/* <br /> */}
                 alert('This is an alert')
             </Code>
         </Division>

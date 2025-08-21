@@ -1,10 +1,9 @@
-import '../styles/code.css'
 import Alert from './Alert'
 export default function Code({
     children,
     ...props
 }: {
-    children: Array<string>
+    children: Array<string> | string
     [key: string]: any    
 }): HTMLDivElement {
     const copyCode = async () => {
@@ -21,10 +20,28 @@ export default function Code({
     const div = document.createElement('div')
     const block = document.createElement('pre')
     const copyBtn = document.createElement('button')
-    console.log(`Type of children is: ${typeof children}`)
     copyBtn.textContent = 'Copy'
-    copyBtn.className = 'copyBtn'
-    div.className = 'code'
+    copyBtn.style.cssText = `
+        width: fit-content;
+        height: fit-content;
+        transform: translateX(85vw);
+        background: #000;
+        border: none;
+        color: white;
+        cursor: pointer;
+    `
+    div.style.cssText = `
+        padding: 10px;
+        padding-top: 20px;
+        margin: 10px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        height: fit-content;
+        background: #000;
+        color: #fff;
+    `
     for (let child of children) {
         block.textContent += '\n' + child
     }
