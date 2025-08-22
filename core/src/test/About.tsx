@@ -21,6 +21,7 @@ export default function About() {
             </List>
             <Code>
                 console.log('Hello World')
+                {}
                 alert('This is an alert')
             </Code>
         </Division>

@@ -101,6 +101,15 @@ declare module 'blazzy-dom' {
         [key: string]: any;
         children: string | number | boolean;
     }): HTMLParagraphElement;
+    export function Image({
+        src,
+        alt,
+        ...props
+    }: {
+        [key: string]: any;
+        src: string;
+        alt: string;
+    }): HTMLImageElement;
     export function Prompt({
         children
     }: {
@@ -172,5 +181,5 @@ declare module 'blazzy-dom' {
     export function updateState(
         key: string,
         value: any
-    ): void
+    ): void;
 }

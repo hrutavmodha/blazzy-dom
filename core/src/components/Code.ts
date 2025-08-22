@@ -3,9 +3,17 @@ export default function Code({
     children,
     ...props
 }: {
-    children: Array<string> | string
-    [key: string]: any    
-}): HTMLDivElement {
+    children: Array<any>
+    [key: string]: any
+}): HTMLDivElement {   
+    const div = document.createElement('div')
+    const block = document.createElement('pre')
+    const copyBtn = document.createElement('button')
+    const traverseChild = (children: Array<any>) => {
+        for (let child of children) {
+            block.textContent += '\n' + child
+        }
+    }
     const copyCode = async () => {
         try {
             await navigator.clipboard.writeText(block.innerText)
@@ -16,10 +24,7 @@ export default function Code({
         catch (error) {
             console.log(error)
         }
-    }    
-    const div = document.createElement('div')
-    const block = document.createElement('pre')
-    const copyBtn = document.createElement('button')
+    }
     copyBtn.textContent = 'Copy'
     copyBtn.style.cssText = `
         width: fit-content;
@@ -42,8 +47,12 @@ export default function Code({
         background: #000;
         color: #fff;
     `
-    for (let child of children) {
-        block.textContent += '\n' + child
+    if (Array.isArray(children)) {
+        traverseChild(children)
+    }
+    else {
+        children = [children]
+        traverseChild(children)
     }
     copyBtn.addEventListener('click', copyCode)
     for (let key in props) {
